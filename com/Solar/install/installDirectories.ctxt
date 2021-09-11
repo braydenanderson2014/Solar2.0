@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=installDirectories
+comment1.params=
+comment1.target=boolean\ checkIsFirstTime()
+comment2.params=
+comment2.target=boolean\ updateIsFirstTime()
+numComments=3

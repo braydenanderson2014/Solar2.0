@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=HelpManagerMenu
+comment1.params=
+comment1.target=void\ helpManagerMenu()
+comment2.params=option
+comment2.target=java.lang.String\ helpManager(java.lang.String)
+numComments=3
