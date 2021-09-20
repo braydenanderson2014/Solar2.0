@@ -23,8 +23,21 @@ public class WarningMessages{
         return true;
     }
     public static String getLastMessage() {
-        int size = WarningMessages.size();
-        size --;
-        return WarningMessages.get(size);
+        if(WarningMessages.size() > 0){
+            int size = WarningMessages.size();
+            size --;
+            return WarningMessages.get(size);
+        }else {
+            return "No Warning Messages";
+        }
+    }
+    public static String getLastTMessage(){
+        if(WarningMessagesT.size() > 0){
+            int size = WarningMessagesT.size();
+            size --;
+            return WarningMessagesT.get(size);
+        }else {
+            return "No Warning Messages";
+        }
     }
 }

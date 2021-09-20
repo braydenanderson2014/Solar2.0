@@ -1,6 +1,7 @@
 package MainSystem;
 import java.util.Scanner;
 import Assets.Logo;
+import Console.Console;
 import Console.ConsoleSettings;
 import install.installManager;
 import messageHandler.messageHandler;
@@ -19,6 +20,9 @@ public class Settings{
         System.out.println("[LOG]: Log Dump Type: " + logType);
         System.out.println("[FIRST]: Enable/Disable FirstTime Setup: " + FirstTime);
         System.out.println("[RETURN]: Return");
+        System.out.println();
+        System.out.println("Console: ");
+        Console.getConsole();
         String option = scan.nextLine().toLowerCase();
         if(option.equals("path")){
 
@@ -41,7 +45,7 @@ public class Settings{
             }
             SettingsMenu();
         }else if(option.equals("return")){
-
+            //MainSystem
         }else {
             messageHandler.HandleMessage(-1, "Invalid option, Try again");
             SettingsMenu();
@@ -57,6 +61,9 @@ public class Settings{
         System.out.println("[LOG]: Log Dump Type: " + logType);
         System.out.println("[FIRST]: Enable/Disable FirstTime Setup: " + FirstTime);
         System.out.println("[RETURN]: Return");
+        System.out.println();
+        System.out.println("Console: ");
+        Console.getConsole();
         String option = scan.nextLine().toLowerCase();
         if(option.equals("path")){
             

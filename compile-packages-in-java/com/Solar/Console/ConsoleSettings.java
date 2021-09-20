@@ -28,7 +28,7 @@ public class ConsoleSettings {
         System.out.println("[HELP]: Help");
         System.out.println("[RETURN]: Return ");
         System.out.println("Console: ");
-
+        Console.getConsole();
         String setToChange = scan.nextLine().toLowerCase();
         if(setToChange.equals("error")){
             if(ErrorSet == true){

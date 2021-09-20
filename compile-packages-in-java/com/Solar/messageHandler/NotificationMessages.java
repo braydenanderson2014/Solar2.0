@@ -22,8 +22,21 @@ public class NotificationMessages{
         return true;
     }
     public static String getLastMessage() {
-        int size = NotificationMessages.size();
-        size --;
-        return NotificationMessages.get(size);
+        if(NotificationMessages.size() > 0){
+            int size = NotificationMessages.size();
+            size --;
+            return NotificationMessages.get(size);
+        }else {
+            return "No Notification Messages";
+        }
+    }
+    public static String getLastTMessage(){
+        if(NotificationMessagesT.size() > 0){
+            int size = NotificationMessagesT.size();
+            size --;
+            return NotificationMessagesT.get(size);
+        }else {
+            return "No Notification Messages";
+        }
     }
 }

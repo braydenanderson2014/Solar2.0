@@ -22,8 +22,21 @@ public class ErrorMessages {
         return true;
     }
     public static String getLastMessage() {
-        int size = ErrorMessages.size();
-        size --;
-        return ErrorMessages.get(size);
+        if(ErrorMessages.size() > 0){
+            int size = ErrorMessages.size();
+            size --;
+            return ErrorMessages.get(size);
+        }else {
+            return "No Error Messages";
+        }
+    }
+    public static String getLastTMessage(){
+        if(ErrorMessagesT.size() > 0){
+            int size = ErrorMessagesT.size();
+            size --;
+            return ErrorMessagesT.get(size);
+        }else {
+            return "No Error Messages";
+        }
     }
 }

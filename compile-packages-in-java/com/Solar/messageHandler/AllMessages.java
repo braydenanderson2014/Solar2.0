@@ -18,11 +18,25 @@ public class AllMessages {
     }
     public static boolean clearMessages(){
         AllMessages.clear();
+        AllMessagesT.clear();
         return true;
     }
     public static String getLastMessage() {
-        int size = AllMessages.size();
-        size --;
-        return AllMessages.get(size);
+        if(AllMessages.size() > 0){
+            int size = AllMessages.size();
+            size --;
+            return AllMessages.get(size);
+        }else {
+            return "No Messages";
+        }
+    }
+    public static String getLastTMessage(){
+        if(AllMessagesT.size() > 0){
+            int size = AllMessagesT.size();
+            size --;
+            return AllMessagesT.get(size);
+        }else {
+            return "No Messages";
+        }
     }
 }

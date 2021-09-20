@@ -9,7 +9,7 @@ import messageHandler.ErrorMessages;
 import messageHandler.SystemMessages;
 import messageHandler.messageHandler;
 
-public class Program{
+public class ProgramController{
     public static boolean isRunning = false;
     public static String Version;
     public static boolean start(){

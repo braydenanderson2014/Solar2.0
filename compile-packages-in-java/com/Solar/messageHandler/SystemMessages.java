@@ -20,8 +20,22 @@ public class SystemMessages{
         return true;
     }
     public static String getLastMessage() {
-        int size = SystemMessages.size();
-        size --;
-        return SystemMessages.get(size);
+        if(SystemMessages.size() > 0){
+            int size = SystemMessages.size();
+            size --;
+            return SystemMessages.get(size);
+        }else if(SystemMessages.size() < 1){
+            return "No System Messages";
+        }
+        return dTime;
+    }
+    public static String getLastTMessage(){
+        if(SystemMessagesT.size() > 0){
+            int size = SystemMessagesT.size();
+            size --;
+            return SystemMessagesT.get(size);
+        }else {
+            return "No System Messages";
+        }
     }
 }

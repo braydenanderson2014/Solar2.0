@@ -15,4 +15,8 @@ public class Login{
     public static String getCurrentUser() {
         return null;
     }
+    public static void SignIn() {
+    
+    }
+    
 }

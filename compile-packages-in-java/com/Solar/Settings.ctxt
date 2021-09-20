@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Settings
-comment1.params=
-comment1.target=void\ SettingsMenu()
-comment2.params=
-comment2.target=boolean\ refreshSettings()
-numComments=3

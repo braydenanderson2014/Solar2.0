@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 import Assets.Logo;
 import Assets.VersionController;
+import Console.Console;
 import HelpManager.HelpManagerMenu;
-import MainSystem.Program;
+import MainSystem.ProgramController;
 import MainSystem.Settings;
+import login.Login;
 import messageHandler.messageHandler;
 
 
@@ -24,7 +26,7 @@ public class installManager{
         messageHandler.HandleMessage(1, "Checking For FirstTime Install...");
         boolean firstTime = FirstTime.checkFirstTime();
         if(firstTime){
-            Program.clearScreen();
+            ProgramController.clearScreen();
             Logo.displayLogo();
             System.out.println();
             System.out.println("Welcome to Solar, Please choose an Install Type");
@@ -33,7 +35,7 @@ public class installManager{
             System.out.println("[HELP]: Help");
             System.out.println();
             System.out.println("Console: ");
-
+            Console.getConsole();
             String option = scan.nextLine().toLowerCase();
             if(option.equals("man")){
                 //manualSetup
@@ -46,7 +48,7 @@ public class installManager{
                 installMenu();
             }
         }else{
-            Program.clearScreen();
+            ProgramController.clearScreen();
             Logo.displayLogo();
             System.out.println();
             System.out.println("Welcome to Solar! We are so Glad You are Here!");
@@ -57,16 +59,16 @@ public class installManager{
             System.out.println("[Stop]: Stop Program and quit");
             System.out.println("Program Version: " + VersionController.getVersion());
             System.out.println("Console: ");
-
+            Console.getConsole();
             String option = scan.nextLine();
             if(option.equals("start")){
-                
+                Login.SignIn();
             }else if(option.equals("config")){
                 Settings.configMenu();
             }else if(option.equals("help")){
                 HelpManagerMenu.helpManagerMenu();// HELP
             }else if(option.equals("stop")){
-
+                ProgramController.stop();
             }else{
                 messageHandler.HandleMessage(-1, "Invalid option, Try again");
                 installMenu();
